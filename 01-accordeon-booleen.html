@@ -9,10 +9,10 @@
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <body>
     <h1>Accordéon avec des booléens</h1>
-    <div class="accordeon">
-      <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel sint obcaecati officiis, ut architecto maiores modi aliquam blanditiis quae eius est corrupti quis temporibus. Aut sapiente similique officia modi eum?</p>
+    <div class="accordeon"> </div>
+      <section x-data="{ open: false }"> 
+        <button @click="open =!open">bouton 1</button>
+        <p x-show="open" x-transition>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel sint obcaecati officiis, ut architecto maiores modi aliquam blanditiis quae eius est corrupti quis temporibus. Aut sapiente similique officia modi eum?</p>
       </section>
       <section>
         <button>bouton 2</button>
